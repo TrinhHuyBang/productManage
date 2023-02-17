@@ -125,8 +125,8 @@ const SingleProduct = ({ colors, sizes }) => {
                         <Row>
                             <div className={Styles.price_group}>
                                 {sale_off ? <span className={Styles.price}>{sale_price - sale_price * sale_off / 100}&nbsp;₫</span> : <span className={Styles.price}>{sale_price}&nbsp;₫</span>}
-                                {sale_off && <span style={{ fontSize: '18px', color: '#939393', fontWeight: '400', lineHeight: '28px' }} className="text-decoration-line-through">{sale_price}&nbsp;₫</span>}
-                                {sale_off && <span className={Styles.sale_off}>{sale_off}%</span>}
+                                {sale_off != 0 && <span style={{ fontSize: '18px', color: '#939393', fontWeight: '400', lineHeight: '28px' }} className="text-decoration-line-through">{sale_price}&nbsp;₫</span>}
+                                {sale_off != 0 && <span className={Styles.sale_off}>{sale_off}%</span>}
                             </div>
                         </Row>
                         <Row>

@@ -10,6 +10,27 @@ import Footer from "./components/Footer";
 import CreateProductForm from "./page/Admin/CreateProductForm";
 import UpdateProductForm from "./page/Admin/UpdateProductForm";
 import useGetAllProductInfo from "./hooks/useGetAllProductInfo";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB4rotrYEwEO2Sb7ECCtwKXJrM0ZuO4Ob8",
+  authDomain: "sp-06-p01-product.firebaseapp.com",
+  projectId: "sp-06-p01-product",
+  storageBucket: "sp-06-p01-product.appspot.com",
+  messagingSenderId: "5642757489",
+  appId: "1:5642757489:web:4333031ae3429b6d3482d0",
+  measurementId: "G-ZSRFRR1KFF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 function App() {
     const { colors, sizes, categories } = useGetAllProductInfo();
     return (
