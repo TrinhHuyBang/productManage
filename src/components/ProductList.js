@@ -68,19 +68,19 @@ const ProductList = () => {
             } else filterColor = true;
             if(valueFilter.price.length > 0) {
                 for(let j = 0; j < valueFilter.price.length; j++) {
-                    if(valueFilter.price[j] === "1" && productList[i].sale_price < 100000) {
+                    if(valueFilter.price[j] === "1" && (productList[i].sale_price - productList[i].sale_price * productList[i].sale_off / 100) < 100000) {
                         filterPrice = true;
                         break;
                     }
-                    if(valueFilter.price[j] === "2" && productList[i].sale_price >= 100000 && productList[i].sale_price < 200000) {
+                    if(valueFilter.price[j] === "2" && (productList[i].sale_price - productList[i].sale_price * productList[i].sale_off / 100) >= 100000 && productList[i].sale_price < 200000) {
                         filterPrice = true;
                         break;
                     }
-                    if(valueFilter.price[j] === "3" && productList[i].sale_price >= 200000 && productList[i].sale_price < 300000) {
+                    if(valueFilter.price[j] === "3" && (productList[i].sale_price - productList[i].sale_price * productList[i].sale_off / 100) >= 200000 && (productList[i].sale_price - productList[i].sale_price * productList[i].sale_off / 100) < 300000) {
                         filterPrice = true;
                         break;
                     }
-                    if(valueFilter.price[j] === "4" && productList[i].sale_price >= 300000) {
+                    if(valueFilter.price[j] === "4" && (productList[i].sale_price - productList[i].sale_price * productList[i].sale_off / 100) >= 300000) {
                         filterPrice = true;
                         break;
                     }
@@ -113,7 +113,7 @@ const ProductList = () => {
                     <BsCart2 style={{ fontSize: '22px', marginRight: '20px' }} />
                 </div>
             </div>
-            {products.length > 0 ?
+            {products.length > 0   ?
                 <div className={Styles.products_center}>
                     {products.map((product) => {
                         return <Product keys={product.id} {...product} />;

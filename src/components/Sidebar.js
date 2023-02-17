@@ -123,7 +123,7 @@ const Sidebar = () => {
                     </div>
                     <div className={Styles.form_group_checkbox}>
                         <input type="checkbox" id="4" value="4" name="price" className={Styles.input_checkbox} onChange={handleChange} />
-                        <label htmlFor="4" className={Styles.input_label}>Từ 3j00.000 trở lên</label>
+                        <label htmlFor="4" className={Styles.input_label}>Từ 300.000 trở lên</label>
                     </div>
                 </>}
             </div>

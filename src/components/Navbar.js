@@ -7,16 +7,16 @@ const Navbar = () => {
     return (
         <nav className={Styles.navbar}>
             <div className={Styles.nav_center}>
-                <Link to="/">
+                {/* <Link to="/">
                     <img src={logo} className={Styles.logo} alt="cocktail db logo" />
-                </Link>
+                </Link> */}
                 <ul className={Styles.nav_links}>
                     <li>
                         <Link style={{ textDecoration: 'none', color: '#000' }} to="/">
                             User
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link style={{ textDecoration: 'none', color: '#000' }} to="/admin">
                             Admin
                         </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
                         <Link style={{ textDecoration: 'none', color: '#000' }} to="/about">
                             About
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
